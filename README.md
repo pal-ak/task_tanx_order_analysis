@@ -10,11 +10,13 @@ task_infrastructure/ <br>
 ├── app.py<br>
 └── tests/<br>
 &nbsp; &nbsp; └── app_test.py<br>
-app.py - Main application code <br>
-app_test.py - Unit tests for the application.<br>
-Dockerfile - Dockerfile for the main application. <br>
-Dockerfile.test - Dockerfile for running tests.<br>
-docker-compose.yml - Docker Compose configuration. <br>
+- app.py - Main application code <br>
+- app_test.py - Unit tests for the application.<br>
+- Dockerfile - Dockerfile for the main application. <br>
+- Dockerfile.test - Dockerfile for running tests.<br>
+- docker-compose.yml - Docker Compose configuration. <br>
+- orders.csv - Data that needs to be calculated <br>
+- requirements.txt - all the required libraries. <br>
 
 ## Setup
 ### Prerequisites

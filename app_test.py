@@ -1,7 +1,7 @@
 import unittest
 import pandas as pd
 from app import load_data, prepare_data, compute_monthly_revenue, compute_product_revenue, compute_customer_revenue, top_10_customers_by_revenue
-
+#importing necessary libraries and functions
 class TestApp(unittest.TestCase):
     def setUp(self):
         # sample data for testing
@@ -16,7 +16,7 @@ class TestApp(unittest.TestCase):
         }
         self.df = pd.DataFrame(data)
         self.df = prepare_data(self.df)
-    
+    #testing each function
     def test_load_data(self):
         df = load_data('orders.csv')
         self.assertIsNotNone(df)

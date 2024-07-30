@@ -1,14 +1,18 @@
-# using Python runtime as parent image
+# Use an official Python runtime as a parent image
 FROM python:3.9-slim
 
-# setting the working directory in the container
+# Set the working directory in the container
 WORKDIR /app
 
-# copying the current directory contents into the container at /app
+# Copy the current directory contents into the container at /app
 COPY . /app
 
-# install packages specified in requirements.txt
+
+# Install any needed packages specified in requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
-# run tests
-CMD ["python", "-m", "unittest", "discover", "-s", "tests"]
+# Define environment variable
+ENV PYTHONPATH=/app
+
+# Run tests when the container launches
+CMD ["python", "tests/test_app.py"]

@@ -1,4 +1,5 @@
-version: '3'
+version: '3.8'
+
 services:
   app:
     build:
@@ -8,10 +9,16 @@ services:
       - .:/app
     ports:
       - "4000:80"
+    environment:
+      - PYTHONPATH=/app
+    container_name: palak
+
   test:
     build:
       context: .
       dockerfile: Dockerfile.test
     volumes:
       - .:/app
-    command: python -m unittest discover -s tests -p '*_test.py'
+    environment:
+      - PYTHONPATH=/app
+    container_name: palak

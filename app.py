@@ -39,7 +39,7 @@ def top_10_customers_by_revenue(customer_revenue):
 
 if __name__ == "__main__":
     # load data
-    orders_df = load_data('orders.csv')
+    orders_df = load_data('app/orders.csv')
     if orders_df is not None:
         # prepare data
         orders_df = prepare_data(orders_df)
